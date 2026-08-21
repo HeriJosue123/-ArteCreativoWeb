@@ -5,7 +5,7 @@ export const ImpactoVisual = () => {
     <section className="relative min-h-[100dvh] snap-start w-full flex items-center justify-center overflow-hidden">
       {/* Background with Parallax Feel */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/images/crochet-snoopy.jpg')" }}
       >
         <div className="absolute inset-0 bg-brand-dark/70"></div>

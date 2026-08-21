@@ -44,32 +44,32 @@ export const Categorias = () => {
     <section id="galeria" className="overflow-hidden bg-brand-dark">
       <div className="mx-auto max-w-6xl px-4 flex flex-col">
         {categories.map((cat, index) => (
-          <article key={cat.id} className="min-h-[100dvh] snap-start py-20 flex flex-col justify-center">
+          <article key={cat.id} className="min-h-[100dvh] snap-start py-6 pt-20 md:py-20 flex flex-col justify-center">
             
             {/* Título de la sección anclado al primer elemento */}
             {index === 0 && (
-              <div className="w-full text-center mb-10 md:mb-16">
-                <h2 className="font-sans-modern mb-3 text-[10px] font-semibold uppercase tracking-[0.4em] text-brand-red md:text-xs">Nuestras Disciplinas</h2>
-                <h3 className="font-editorial text-5xl italic text-brand-white md:text-7xl">Galería Creativa</h3>
+              <div className="w-full text-center mb-6 md:mb-16 shrink-0">
+                <h2 className="font-sans-modern mb-2 md:mb-3 text-[10px] font-semibold uppercase tracking-[0.4em] text-brand-red md:text-xs">Nuestras Disciplinas</h2>
+                <h3 className="font-editorial text-4xl md:text-5xl italic text-brand-white lg:text-7xl">Galería Creativa</h3>
               </div>
             )}
 
-            <div className={`flex w-full flex-col ${cat.align === "right" ? "md:flex-row-reverse" : "md:flex-row"} items-center justify-center gap-10 md:gap-16`}>
+            <div className={`flex w-full flex-col ${cat.align === "right" ? "md:flex-row-reverse" : "md:flex-row"} items-center justify-center gap-6 md:gap-16`}>
               <motion.div
                 initial={{ opacity: 0, x: cat.align === "right" ? 30 : -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8 }}
-                className="w-full md:w-1/2"
+                className="w-full md:w-1/2 flex justify-center"
               >
-                <div className="group relative mx-auto w-full max-w-xl overflow-hidden rounded-sm bg-brand-carbon">
+                <div className="group relative w-full max-w-sm md:max-w-xl overflow-hidden rounded-sm bg-brand-carbon">
                   <img
                     src={cat.image}
                     alt={cat.title}
                     loading="lazy"
-                    className="block h-auto max-h-[500px] md:max-h-[680px] w-full object-contain transition-transform duration-1000 group-hover:scale-[1.02]"
+                    className="block w-full h-[35vh] md:h-auto md:max-h-[600px] object-contain transition-transform duration-1000 group-hover:scale-[1.02]"
                   />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#080808]/35 via-transparent to-transparent" />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#080808]/50 via-transparent to-transparent" />
                 </div>
               </motion.div>
 
@@ -78,12 +78,12 @@ export const Categorias = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="flex w-full flex-col justify-center md:w-1/2"
+                className="flex w-full flex-col justify-center md:w-1/2 text-center md:text-left"
               >
-                <span className="font-sans-modern mb-4 block text-[10px] font-semibold uppercase tracking-widest text-brand-red md:text-xs">0{index + 1} // {cat.subtitle}</span>
-                <h4 className={`${cat.titleFont} mb-6 leading-tight text-brand-white`}>{cat.title}</h4>
-                <p className="max-w-md font-sans-modern text-base font-light leading-relaxed text-brand-neutral/70 md:text-lg">{cat.description}</p>
-                <div className="mt-10">
+                <span className="font-sans-modern mb-2 md:mb-4 block text-[10px] font-semibold uppercase tracking-widest text-brand-red md:text-xs">0{index + 1} // {cat.subtitle}</span>
+                <h4 className={`${cat.titleFont} mb-3 md:mb-6 leading-tight text-brand-white`}>{cat.title}</h4>
+                <p className="max-w-md mx-auto md:mx-0 font-sans-modern text-sm md:text-base font-light leading-relaxed text-brand-neutral/70 md:text-lg">{cat.description}</p>
+                <div className="mt-6 md:mt-10">
                   <span className="group inline-flex cursor-pointer items-center gap-2 font-sans-modern text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-white/50 transition-colors hover:text-brand-red md:text-xs">
                     Explorar
                     <svg className="h-4 w-4 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
