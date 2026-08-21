@@ -18,17 +18,17 @@ export const Intro = () => {
   useEffect(() => {
     document.body.style.overflow = "hidden";
 
-    // Cycle through words every 650ms
+    // Cycle through words every 900ms
     const interval = setInterval(() => {
       setWordIndex(prev => {
         if (prev < seq.length - 1) return prev + 1;
         
         clearInterval(interval);
-        // After reaching the last word, wait 1.8s then start ending sequence
-        setTimeout(() => setPhase("ending"), 1800);
+        // After reaching the last word, wait 1.4s then start ending sequence
+        setTimeout(() => setPhase("ending"), 1400);
         return prev;
       });
-    }, 650);
+    }, 900);
 
     return () => {
       clearInterval(interval);
@@ -38,11 +38,11 @@ export const Intro = () => {
 
   useEffect(() => {
     if (phase === "ending") {
-      // Allow "ARTE Creativo" to linger alone for 1.2s, then hide entire intro
+      // Allow "ARTE Creativo" to linger alone for 1.0s, then hide entire intro
       const timer = setTimeout(() => {
         setIsVisible(false);
         document.body.style.overflow = "";
-      }, 1200);
+      }, 1000);
       return () => clearTimeout(timer);
     }
   }, [phase]);
@@ -66,9 +66,9 @@ export const Intro = () => {
                 <motion.img
                   key={seq[wordIndex].text}
                   src={seq[wordIndex].img}
-                  initial={{ opacity: 0, scale: 1.1, filter: "blur(20px)" }}
-                  animate={{ opacity: 0.12, scale: 1, filter: "blur(10px)" }}
-                  exit={{ opacity: 0, filter: "blur(20px)" }}
+                  initial={{ opacity: 0, scale: 1.05, filter: "blur(12px)" }}
+                  animate={{ opacity: 0.12, scale: 1, filter: "blur(8px)" }}
+                  exit={{ opacity: 0, filter: "blur(12px)" }}
                   transition={{ duration: 1.2, ease: "easeOut" }}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -114,10 +114,10 @@ export const Intro = () => {
                 {phase === "words" && (
                   <motion.div
                     key={seq[wordIndex].text}
-                    initial={{ opacity: 0, y: -15, filter: "blur(6px)" }}
+                    initial={{ opacity: 0, y: -10, filter: "blur(2px)" }}
                     animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                    exit={{ opacity: 0, y: 15, filter: "blur(6px)" }}
-                    transition={{ duration: 0.4, ease: "easeOut" }}
+                    exit={{ opacity: 0, y: 10, filter: "blur(2px)" }}
+                    transition={{ duration: 0.25, ease: "easeOut" }}
                     className="font-sans-modern text-brand-white/70 text-[10px] md:text-xs uppercase tracking-[0.6em] font-medium absolute text-center w-full whitespace-nowrap"
                   >
                     {seq[wordIndex].text}
