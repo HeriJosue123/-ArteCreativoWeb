@@ -91,19 +91,6 @@ export const Hero = () => {
         </AnimatePresence>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 14, scale: 0.96 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.9, delay: 1.9, ease: "easeOut" }}
-        className="absolute left-1/2 top-[74%] z-20 w-[145px] -translate-x-1/2 -translate-y-1/2 sm:top-[73%] sm:w-[190px] md:top-[72%] md:w-[235px]"
-      >
-        <img
-          src="/images/arte-creativo-logo.svg"
-          alt="Arte Creativo"
-          className="mx-auto h-auto w-full drop-shadow-[0_10px_24px_rgba(0,0,0,0.55)]"
-        />
-      </motion.div>
-
       <div className="absolute bottom-20 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2">
         {slides.map((item, index) => (
           <button key={item.image} type="button" aria-label={`Ir a la diapositiva ${index + 1}`} onClick={() => setActive(index)} className="group flex h-5 items-center">
