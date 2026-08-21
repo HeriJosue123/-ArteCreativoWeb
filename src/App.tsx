@@ -5,6 +5,7 @@ import { Categorias } from "./components/Categorias";
 import { ImpactoVisual } from "./components/ImpactoVisual";
 import { CallToAction } from "./components/CallToAction";
 import { Intro } from "./components/Intro";
+import WhatsAppContact from "./components/WhatsAppContact";
 
 function App() {
   return (
@@ -16,9 +17,9 @@ function App() {
       <Categorias />
       <ImpactoVisual />
       <CallToAction />
+      <WhatsAppContact />
     </div>
   );
 }
 
 export default App;
-
