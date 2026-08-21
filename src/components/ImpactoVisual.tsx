@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export const ImpactoVisual = () => {
   return (
-    <section className="relative h-[60vh] min-h-[400px] w-full flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[100dvh] snap-start w-full flex items-center justify-center overflow-hidden">
       {/* Background with Parallax Feel */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-fixed"

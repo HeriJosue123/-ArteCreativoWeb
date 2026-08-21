@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export const Manifiesto = () => {
   return (
-    <section id="manifiesto" className="py-12 md:py-32 bg-brand-dark relative overflow-hidden">
+    <section id="manifiesto" className="min-h-[100dvh] snap-start flex items-center py-12 md:py-32 bg-brand-dark relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-12">
         <motion.div
           initial={{ opacity: 0, x: -40 }}

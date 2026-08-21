@@ -46,7 +46,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative h-[100dvh] min-h-[640px] w-full overflow-hidden bg-brand-dark">
+    <section id="home" className="relative h-[100dvh] min-h-[640px] w-full overflow-hidden bg-brand-dark snap-start">
       <AnimatePresence mode="sync" initial={false}>
         <motion.div
           key={slide.image}

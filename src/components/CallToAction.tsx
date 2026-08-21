@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export const CallToAction = () => {
   return (
-    <section id="contacto" className="py-12 md:py-32 bg-brand-carbon text-center px-4 relative overflow-hidden">
+    <section id="contacto" className="min-h-[100dvh] snap-start flex flex-col justify-center py-12 md:py-32 bg-brand-carbon text-center px-4 relative overflow-hidden">
       <div className="max-w-6xl mx-auto relative z-10 flex flex-col-reverse md:flex-row items-center gap-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}

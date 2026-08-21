@@ -9,7 +9,7 @@ import WhatsAppContact from "./components/WhatsAppContact";
 
 function App() {
   return (
-    <div className="bg-brand-dark min-h-screen">
+    <div className="bg-brand-dark min-h-screen text-brand-white w-full overflow-x-hidden">
       <Intro />
       <Navbar />
       <Hero />

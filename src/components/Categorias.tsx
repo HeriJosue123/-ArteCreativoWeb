@@ -41,16 +41,16 @@ const categories = [
 
 export const Categorias = () => {
   return (
-    <section id="galeria" className="overflow-hidden bg-brand-dark px-4 py-12 md:py-32">
-      <div className="mx-auto max-w-6xl">
-        <div className="mb-12 text-center md:mb-24">
+    <section id="galeria" className="overflow-hidden bg-brand-dark">
+      <div className="mx-auto max-w-6xl px-4">
+        <div className="min-h-[50dvh] snap-start flex flex-col justify-center text-center pt-24 pb-12">
           <h2 className="font-sans-modern mb-4 text-[10px] font-semibold uppercase tracking-[0.4em] text-brand-red md:text-xs">Nuestras Disciplinas</h2>
           <h3 className="font-editorial text-5xl italic text-brand-white md:text-7xl">Galería Creativa</h3>
         </div>
 
-        <div className="space-y-20 md:space-y-32">
+        <div className="flex flex-col">
           {categories.map((cat, index) => (
-            <article key={cat.id} className={`flex flex-col ${cat.align === "right" ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-10 md:gap-16`}>
+            <article key={cat.id} className={`min-h-[100dvh] snap-start py-12 md:py-20 flex flex-col ${cat.align === "right" ? "md:flex-row-reverse" : "md:flex-row"} items-center justify-center gap-10 md:gap-16`}>
               <motion.div
                 initial={{ opacity: 0, x: cat.align === "right" ? 30 : -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
