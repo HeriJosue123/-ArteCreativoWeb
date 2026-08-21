@@ -24,7 +24,7 @@ const categories = [
     title: "Pintura & Tote Bags",
     subtitle: "Lienzo y Tela",
     description: "Lienzos que cobran vida y accesorios únicos pintados a mano. Tu arte a donde vayas.",
-    image: "/images/icon-pintura.jpg",
+    image: "/images/tote-bags.jpg",
     align: "left",
     titleFont: "font-editorial text-4xl md:text-6xl font-medium"
   },
@@ -33,7 +33,7 @@ const categories = [
     title: "Dibujo Realista",
     subtitle: "A Lápiz",
     description: "Retratos personalizados con precisión milimétrica. Capturando la esencia en cada trazo.",
-    image: "/images/icon-dibujo.jpg",
+    image: "/images/dibujo-ramos.jpg",
     align: "right",
     titleFont: "font-editorial uppercase tracking-[0.2em] text-4xl md:text-5xl font-light"
   }
