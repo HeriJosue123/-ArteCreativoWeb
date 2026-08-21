@@ -25,18 +25,20 @@ export const Navbar = () => {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className={`fixed left-0 top-0 z-50 w-full transition-all duration-700 ease-out ${isScrolled ? "bg-[#121212]/90 py-4 shadow-2xl backdrop-blur-xl" : "bg-transparent py-8 md:py-10"}`}
+      className={`fixed left-0 top-0 z-50 w-full transition-all duration-700 ease-out ${isScrolled ? "bg-[#121212]/90 py-4 shadow-2xl backdrop-blur-xl" : "bg-transparent py-5 md:py-7"}`}
     >
-      <div className="flex w-full items-center px-3 md:px-6 lg:px-8">
+      <div className="flex w-full items-center px-4 md:px-6 lg:px-8">
         <motion.a
           variants={itemVariants}
           href="#home"
-          className={`flex items-center transition-all duration-700 ease-out ${isScrolled ? "opacity-80" : "opacity-100"}`}
+          aria-label="Arte Creativo"
+          className={`block transition-all duration-700 ease-out ${isScrolled ? "opacity-80" : "opacity-100"}`}
         >
-          <div className={`flex origin-left items-baseline gap-2 transition-all duration-700 ease-out ${isScrolled ? "scale-90" : "scale-100 hover:tracking-widest"}`}>
-            <span className="font-sans-modern text-[10px] font-semibold uppercase tracking-[0.4em] text-brand-white transition-all duration-700 md:text-xs">ARTE</span>
-            <span className="font-editorial text-lg font-medium italic text-brand-red transition-all duration-700 md:text-2xl">Creativo</span>
-          </div>
+          <img
+            src="/images/arte-creativo-logo.svg"
+            alt="Arte Creativo"
+            className={`h-auto w-[165px] object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.45)] transition-all duration-700 md:w-[215px] ${isScrolled ? "scale-90 origin-left" : "scale-100"}`}
+          />
         </motion.a>
       </div>
     </motion.nav>
