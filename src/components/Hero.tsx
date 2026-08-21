@@ -57,9 +57,9 @@ export const Hero = () => {
           className="absolute inset-0 z-0"
         >
           <img src={slide.image} alt="" aria-hidden="true" className="h-full w-full object-cover object-center" />
-          <div className="absolute inset-0 bg-[#080808]/55" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#080808]/35 via-[#080808]/55 to-[#121212]" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#080808]/55 via-transparent to-[#080808]/35" />
+          <div className="absolute inset-0 bg-[#080808]/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#080808]/40 via-[#080808]/60 to-[#121212]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#080808]/60 via-transparent to-[#080808]/40" />
         </motion.div>
       </AnimatePresence>
 
@@ -90,6 +90,19 @@ export const Hero = () => {
           </motion.div>
         </AnimatePresence>
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 18, scale: 0.96 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 1, delay: 1.9, ease: "easeOut" }}
+        className="absolute left-1/2 top-[68%] z-20 w-[230px] -translate-x-1/2 -translate-y-1/2 sm:w-[290px] md:top-[67%] md:w-[350px]"
+      >
+        <img
+          src="/images/arte-creativo-logo.svg"
+          alt="Arte Creativo"
+          className="h-auto w-full drop-shadow-[0_14px_35px_rgba(0,0,0,0.45)]"
+        />
+      </motion.div>
 
       <div className="absolute bottom-20 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2">
         {slides.map((item, index) => (
