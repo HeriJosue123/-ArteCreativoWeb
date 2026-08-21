@@ -42,15 +42,19 @@ const categories = [
 export const Categorias = () => {
   return (
     <section id="galeria" className="overflow-hidden bg-brand-dark">
-      <div className="mx-auto max-w-6xl px-4">
-        <div className="min-h-[50dvh] snap-start flex flex-col justify-center text-center pt-24 pb-12">
-          <h2 className="font-sans-modern mb-4 text-[10px] font-semibold uppercase tracking-[0.4em] text-brand-red md:text-xs">Nuestras Disciplinas</h2>
-          <h3 className="font-editorial text-5xl italic text-brand-white md:text-7xl">Galería Creativa</h3>
-        </div>
+      <div className="mx-auto max-w-6xl px-4 flex flex-col">
+        {categories.map((cat, index) => (
+          <article key={cat.id} className="min-h-[100dvh] snap-start py-20 flex flex-col justify-center">
+            
+            {/* Título de la sección anclado al primer elemento */}
+            {index === 0 && (
+              <div className="w-full text-center mb-10 md:mb-16">
+                <h2 className="font-sans-modern mb-3 text-[10px] font-semibold uppercase tracking-[0.4em] text-brand-red md:text-xs">Nuestras Disciplinas</h2>
+                <h3 className="font-editorial text-5xl italic text-brand-white md:text-7xl">Galería Creativa</h3>
+              </div>
+            )}
 
-        <div className="flex flex-col">
-          {categories.map((cat, index) => (
-            <article key={cat.id} className={`min-h-[100dvh] snap-start py-12 md:py-20 flex flex-col ${cat.align === "right" ? "md:flex-row-reverse" : "md:flex-row"} items-center justify-center gap-10 md:gap-16`}>
+            <div className={`flex w-full flex-col ${cat.align === "right" ? "md:flex-row-reverse" : "md:flex-row"} items-center justify-center gap-10 md:gap-16`}>
               <motion.div
                 initial={{ opacity: 0, x: cat.align === "right" ? 30 : -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -63,7 +67,7 @@ export const Categorias = () => {
                     src={cat.image}
                     alt={cat.title}
                     loading="lazy"
-                    className="block h-auto max-h-[680px] w-full object-contain transition-transform duration-1000 group-hover:scale-[1.02]"
+                    className="block h-auto max-h-[500px] md:max-h-[680px] w-full object-contain transition-transform duration-1000 group-hover:scale-[1.02]"
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#080808]/35 via-transparent to-transparent" />
                 </div>
@@ -86,9 +90,10 @@ export const Categorias = () => {
                   </span>
                 </div>
               </motion.div>
-            </article>
-          ))}
-        </div>
+            </div>
+
+          </article>
+        ))}
       </div>
     </section>
   );
