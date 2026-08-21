@@ -12,7 +12,7 @@ export const Navbar = () => {
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.25, delayChildren: 1.8 } },
+    visible: { opacity: 1, transition: { staggerChildren: 0.25, delayChildren: 5.6 } },
   };
 
   const itemVariants = {
