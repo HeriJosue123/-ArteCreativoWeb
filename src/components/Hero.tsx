@@ -63,7 +63,7 @@ export const Hero = () => {
         </motion.div>
       </AnimatePresence>
 
-      <div className="relative z-10 flex h-full items-center justify-center px-5 text-center">
+      <div className="relative z-10 flex h-full items-center justify-center px-5 pb-24 pt-12 text-center">
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={slide.image}
@@ -71,7 +71,7 @@ export const Hero = () => {
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             exit={{ opacity: 0, y: -18, filter: "blur(8px)" }}
             transition={{ duration: 0.85, ease: "easeOut" }}
-            className="mx-auto flex max-w-5xl flex-col items-center"
+            className="mx-auto flex max-w-5xl -translate-y-8 flex-col items-center sm:-translate-y-6 md:-translate-y-4"
           >
             <p className="font-sans-modern mb-5 text-[9px] font-semibold uppercase tracking-[0.48em] text-brand-red sm:text-xs">
               {slide.eyebrow}
@@ -92,15 +92,15 @@ export const Hero = () => {
       </div>
 
       <motion.div
-        initial={{ opacity: 0, y: 18, scale: 0.96 }}
+        initial={{ opacity: 0, y: 14, scale: 0.96 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 1, delay: 1.9, ease: "easeOut" }}
-        className="absolute left-1/2 top-[68%] z-20 w-[230px] -translate-x-1/2 -translate-y-1/2 sm:w-[290px] md:top-[67%] md:w-[350px]"
+        transition={{ duration: 0.9, delay: 1.9, ease: "easeOut" }}
+        className="absolute left-1/2 top-[74%] z-20 w-[145px] -translate-x-1/2 -translate-y-1/2 sm:top-[73%] sm:w-[190px] md:top-[72%] md:w-[235px]"
       >
         <img
           src="/images/arte-creativo-logo.svg"
           alt="Arte Creativo"
-          className="h-auto w-full drop-shadow-[0_14px_35px_rgba(0,0,0,0.45)]"
+          className="mx-auto h-auto w-full drop-shadow-[0_10px_24px_rgba(0,0,0,0.55)]"
         />
       </motion.div>
 
