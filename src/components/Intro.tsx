@@ -3,8 +3,6 @@ import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 
 const seq = [
   { text: "CREAR", img: "/images/hero-bg.jpg" },
-  { text: "IMAGINAR", img: "/images/icon-dibujo.jpg" },
-  { text: "TEJER", img: "/images/crochet-custom.jpg" },
   { text: "INSPIRAR", img: "/images/pixel-naruto.jpg" },
   { text: "HECHO A MANO", img: "/images/icon-pintura.jpg" }
 ];
@@ -18,17 +16,17 @@ export const Intro = () => {
   useEffect(() => {
     document.body.style.overflow = "hidden";
 
-    // Cycle through words every 900ms
+    // Cycle through words every 750ms
     const interval = setInterval(() => {
       setWordIndex(prev => {
         if (prev < seq.length - 1) return prev + 1;
         
         clearInterval(interval);
-        // After reaching the last word, wait 1.4s then start ending sequence
-        setTimeout(() => setPhase("ending"), 1400);
+        // After reaching the last word, wait 1s then start ending sequence
+        setTimeout(() => setPhase("ending"), 1000);
         return prev;
       });
-    }, 900);
+    }, 750);
 
     return () => {
       clearInterval(interval);
@@ -38,11 +36,11 @@ export const Intro = () => {
 
   useEffect(() => {
     if (phase === "ending") {
-      // Allow "ARTE Creativo" to linger alone for 1.0s, then hide entire intro
+      // Allow "ARTE Creativo" to linger alone for 0.7s, then hide entire intro
       const timer = setTimeout(() => {
         setIsVisible(false);
         document.body.style.overflow = "";
-      }, 1000);
+      }, 700);
       return () => clearTimeout(timer);
     }
   }, [phase]);
@@ -56,7 +54,7 @@ export const Intro = () => {
           key="intro"
           initial={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
           exit={{ opacity: 0, filter: "blur(12px)", scale: 1.05 }}
-          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
           className="fixed inset-0 z-[999999] flex items-center justify-center bg-[#0a0a0a] overflow-hidden"
         >
           {/* Fading Background Images */}
