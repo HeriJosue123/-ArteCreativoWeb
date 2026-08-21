@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-red: #c91823;
+  --color-brand-red-light: #e6202c;
+  --color-brand-dark: #121212;
+  --color-brand-carbon: #1e1e1e;
+  --color-brand-white: #fafafa;
+  --color-brand-neutral: #f0edea;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-dark);
+    color: var(--color-brand-white);
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+  }
+}
+
+.font-artistic {
+  font-family: "Playfair Display", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
