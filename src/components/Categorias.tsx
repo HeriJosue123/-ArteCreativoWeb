@@ -58,7 +58,7 @@ export const Categorias = () => {
                 transition={{ duration: 0.8 }}
                 className="w-full md:w-1/2"
               >
-                <div className="group relative mx-auto w-full max-w-xl overflow-hidden rounded-sm border border-brand-white/10 bg-brand-carbon">
+                <div className="group relative mx-auto w-full max-w-xl overflow-hidden rounded-sm bg-brand-carbon">
                   <img
                     src={cat.image}
                     alt={cat.title}
