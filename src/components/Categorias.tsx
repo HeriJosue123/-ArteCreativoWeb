@@ -5,28 +5,28 @@ const categories = [
     id: 1,
     title: "Pintura & Tote Bags",
     description: "Lienzos que cobran vida y accesorios únicos pintados a mano.",
-    image: "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?q=80&w=1600&auto=format&fit=crop",
+    image: "/images/icon-pintura.jpg",
     colSpan: "md:col-span-2 md:row-span-2",
   },
   {
     id: 2,
     title: "Arte en Crochet",
     description: "Creaciones tejidas con dedicación y detalle.",
-    image: "https://images.unsplash.com/photo-1606501127003-883a9ce34e32?q=80&w=800&auto=format&fit=crop",
+    image: "/images/crochet-mj.jpg",
     colSpan: "md:col-span-1 md:row-span-1",
   },
   {
     id: 3,
     title: "Pixel Art",
     description: "Estilo retro convertido en arte moderno.",
-    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop",
+    image: "/images/pixel-naruto.jpg",
     colSpan: "md:col-span-1 md:row-span-1",
   },
   {
     id: 4,
     title: "Dibujo Realista",
     description: "Retratos personalizados con precisión milimétrica.",
-    image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=1600&auto=format&fit=crop",
+    image: "/images/icon-dibujo.jpg",
     colSpan: "md:col-span-2 md:row-span-1",
   }
 ];

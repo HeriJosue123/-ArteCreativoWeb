@@ -7,7 +7,7 @@ export const Hero = () => {
       {/* Background Image Placeholder */}
       <div 
         className="absolute inset-0 z-0 opacity-40 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2071&auto=format&fit=crop')" }}
+        style={{ backgroundImage: "url('/images/pixel-walle.jpg')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/40 via-brand-dark/60 to-brand-dark"></div>
       </div>

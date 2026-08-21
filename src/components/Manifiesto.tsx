@@ -3,20 +3,38 @@ import { motion } from "framer-motion";
 export const Manifiesto = () => {
   return (
     <section id="manifiesto" className="py-32 bg-brand-dark relative overflow-hidden">
-      <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <div className="max-w-6xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-12">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
+          className="w-full md:w-1/2 flex justify-center"
         >
-          <h2 className="text-brand-red text-sm uppercase tracking-[0.4em] mb-8 font-semibold">
+          <div className="relative">
+            <div className="absolute -inset-4 border-2 border-brand-red/30 rounded-sm translate-x-4 translate-y-4"></div>
+            <img 
+              src="/images/crochet-mj.jpg" 
+              alt="Michael Jackson Amigurumi" 
+              className="relative z-10 w-full max-w-sm object-cover rounded-sm shadow-2xl"
+            />
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="w-full md:w-1/2 text-left"
+        >
+          <h2 className="text-brand-red text-sm uppercase tracking-[0.4em] mb-6 font-semibold">
             Nuestro Manifiesto
           </h2>
-          <p className="font-artistic text-3xl md:text-5xl leading-tight text-brand-white mb-10">
+          <p className="font-artistic text-3xl md:text-5xl leading-tight text-brand-white mb-8">
             Nacimos con la convicción de que el arte no solo se observa, <span className="italic text-brand-red-light">se vive</span>.
           </p>
-          <p className="text-brand-neutral/70 text-lg max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-brand-neutral/70 text-lg font-light leading-relaxed">
             Comenzamos en 2024 tejiendo sueños para forjar nuestro propio camino. Hoy, Arte Creativo es un refugio para la expresión auténtica, el trabajo artesanal y la pasión juvenil. Cada trazo, cada puntada y cada pixel cuenta una historia única. La tuya.
           </p>
         </motion.div>

@@ -6,7 +6,7 @@ export const ImpactoVisual = () => {
       {/* Background with Parallax Feel */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?q=80&w=2000&auto=format&fit=crop')" }}
+        style={{ backgroundImage: "url('/images/pixel-walle.jpg')" }}
       >
         <div className="absolute inset-0 bg-brand-dark/70"></div>
       </div>
