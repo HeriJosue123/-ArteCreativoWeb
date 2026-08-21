@@ -12,7 +12,6 @@ export const Manifiesto = () => {
           className="w-full md:w-1/2 flex justify-center"
         >
           <div className="relative">
-            <div className="absolute -inset-4 border-2 border-brand-red/30 rounded-sm translate-x-4 translate-y-4"></div>
             <img 
               src="/images/crochet-mj.jpg" 
               alt="Michael Jackson Amigurumi" 
@@ -47,4 +46,3 @@ export const Manifiesto = () => {
     </section>
   );
 };
-
