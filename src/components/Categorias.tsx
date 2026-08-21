@@ -33,7 +33,7 @@ const categories = [
     title: "Dibujo Realista",
     subtitle: "A Lápiz",
     description: "Retratos personalizados con precisión milimétrica. Capturando la esencia en cada trazo.",
-    image: "/images/dibujo-ramos.jpg",
+    image: "/images/dibujo-realista.jpg",
     align: "right",
     titleFont: "font-editorial uppercase tracking-[0.2em] text-4xl md:text-5xl font-light"
   }
