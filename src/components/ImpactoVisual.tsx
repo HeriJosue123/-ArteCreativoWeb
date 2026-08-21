@@ -6,7 +6,7 @@ export const ImpactoVisual = () => {
       {/* Background with Parallax Feel */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: "url('/images/pixel-walle.jpg')" }}
+        style={{ backgroundImage: "url('/images/crochet-snoopy.jpg')" }}
       >
         <div className="absolute inset-0 bg-brand-dark/70"></div>
       </div>
@@ -17,10 +17,10 @@ export const ImpactoVisual = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="font-artistic text-4xl md:text-6xl text-brand-white leading-tight"
+          className="font-editorial text-5xl md:text-7xl text-brand-white leading-none"
         >
           Donde las ideas <br/>
-          <span className="text-brand-red italic">toman forma</span>
+          <span className="text-brand-red italic text-6xl md:text-8xl mt-2 block">toman forma</span>
         </motion.h2>
       </div>
     </section>

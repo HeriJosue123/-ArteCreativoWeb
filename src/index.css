@@ -17,10 +17,20 @@
   }
 }
 
-.font-artistic {
-  font-family: "Playfair Display", serif;
+.font-editorial {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.font-sans-modern {
+  font-family: "Montserrat", sans-serif;
+}
+
+.font-pixel {
+  font-family: "VT323", monospace;
 }
 
 html {
   scroll-behavior: smooth;
 }
+
+body, html { overflow-x: hidden; width: 100%; max-width: 100vw; }
