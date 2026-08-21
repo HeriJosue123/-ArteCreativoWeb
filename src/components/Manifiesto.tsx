@@ -11,11 +11,11 @@ export const Manifiesto = () => {
           transition={{ duration: 0.8 }}
           className="w-full md:w-1/2 flex justify-center"
         >
-          <div className="relative">
-            <img 
-              src="/images/crochet-mj.jpg" 
-              alt="Michael Jackson Amigurumi" 
-              className="relative z-10 w-full max-w-sm object-cover rounded-sm shadow-2xl"
+          <div className="relative !border-0 !outline-none !ring-0 before:hidden after:hidden">
+            <img
+              src="/images/crochet-mj.jpg"
+              alt="Michael Jackson Amigurumi"
+              className="relative z-10 block w-full max-w-sm object-cover rounded-sm shadow-2xl !border-0 !outline-none !ring-0"
             />
           </div>
         </motion.div>
@@ -39,7 +39,7 @@ export const Manifiesto = () => {
           </p>
         </motion.div>
       </div>
-      
+
       {/* Elementos decorativos abstractos */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-brand-red/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-brand-carbon rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
