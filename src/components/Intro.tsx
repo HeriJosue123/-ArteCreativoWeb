@@ -54,8 +54,8 @@ export const Intro = () => {
       {isVisible && (
         <motion.div
           key="intro"
-          initial={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          initial={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
+          exit={{ opacity: 0, filter: "blur(12px)", scale: 1.05 }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className="fixed inset-0 z-[999999] flex items-center justify-center bg-[#0a0a0a] overflow-hidden"
         >
@@ -78,7 +78,7 @@ export const Intro = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-[#0a0a0a]"></div>
           </div>
 
-          <div className="relative z-10 flex flex-col items-center justify-center">
+          <div className="relative z-10 flex flex-col items-center justify-center w-full">
             
             {/* ARTE Creativo Centerpiece */}
             <div className="overflow-hidden flex flex-col md:flex-row items-center md:items-end gap-0 md:gap-4 relative">
@@ -109,16 +109,16 @@ export const Intro = () => {
             />
 
             {/* Changing Words */}
-            <div className="h-10 flex flex-col items-center justify-center relative">
+            <div className="h-10 w-full flex flex-col items-center justify-center relative">
               <AnimatePresence mode="wait">
                 {phase === "words" && (
                   <motion.div
                     key={seq[wordIndex].text}
-                    initial={{ opacity: 0, y: 15, filter: "blur(6px)" }}
+                    initial={{ opacity: 0, y: -15, filter: "blur(6px)" }}
                     animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                    exit={{ opacity: 0, y: -15, filter: "blur(6px)" }}
+                    exit={{ opacity: 0, y: 15, filter: "blur(6px)" }}
                     transition={{ duration: 0.4, ease: "easeOut" }}
-                    className="font-sans-modern text-brand-white/70 text-[10px] md:text-xs uppercase tracking-[0.6em] font-medium absolute text-center w-full"
+                    className="font-sans-modern text-brand-white/70 text-[10px] md:text-xs uppercase tracking-[0.6em] font-medium absolute text-center w-full whitespace-nowrap"
                   >
                     {seq[wordIndex].text}
                   </motion.div>
@@ -127,7 +127,7 @@ export const Intro = () => {
             </div>
 
             {/* Final Tagline under HECHO A MANO */}
-            <div className="h-4 mt-2">
+            <div className="h-4 mt-2 w-full flex justify-center">
               <AnimatePresence>
                 {wordIndex === seq.length - 1 && phase === "words" && (
                   <motion.div
@@ -135,7 +135,7 @@ export const Intro = () => {
                     animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-                    className="font-editorial italic text-brand-red/80 text-xs md:text-sm tracking-[0.3em] font-light"
+                    className="font-editorial italic text-brand-red/80 text-[10px] md:text-sm tracking-[0.3em] font-light whitespace-nowrap"
                   >
                     ARTE QUE SE SIENTE
                   </motion.div>
